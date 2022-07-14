@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slack: New Account Details</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <style>
+    <style type="text/css">
         /* Global Resets */
         body,
         .background_main,
@@ -45,7 +45,7 @@
       .email_footer p,
       .email_footer span,
       .email_footer a {
-        font-align: 15px;
+        font-size: 15px;
         text-align: center;
         color: #434245;
 
@@ -80,12 +80,212 @@
         letter-spacing: -.75px;
         text-align: left;
       }
+      p,
+      ul,
+      ol {
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    p li,
+    ul li,
+    ol li {
+        list-style-position: inside;
+        margin-left: 5px;
+    }
+    a {
+        color: #3498db;
+        text-decoration: none;
+    }
+
+    .button_link::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 4px;
+    }
+
+    .button_link:hover::after {
+        box-shadow: inset 0 -2px #237c4a;
+
+    }
+
+    .button_link.is_secondary:hover::after {
+        box-shadow: none;
+    }
+    .button_link_wrapper.plum:hover {
+        background-color: #4a154b !important; 
+    }
+    
+    .button_link.plum:hover::after {
+        box-shadow: none;
+    }
+
+    .preview_text {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0;
+        font-size: 1px;
+        line-height: 1px;
+
+    }
+
+    .preview_text a {
+        color: #3AA3E3 !important;
+        font-weight: bold;
+    }
+    /* Responsive and Mobile Friendly Styles */
+    /* Yahoo Mail has a history of rendering all media query styles with class selectors unless class is used as an attribute */
+    @media only screen and (max-width: 600px) {
+        table[class="background_main"] .sm_full_width {
+            width: 100% !important;
+    }
+    table[class="background_main"] .sm_90_percent_width {
+            width: 90% !important;
+            padding: 16px !important;
+            text-align: center !important;
+            float: none !important;
+
+    }
+    table[class="background_main"] .sm_side_padding {
+          padding-right: 8px !important;
+          padding-left: 8px !important;
+          float: none !important;
+        }
+    table[class="background_main"] .sm_small_top_padding {
+          padding-top: 8px !important;
+        }
+        table[class="background_main"] .sm_top_padding {
+          padding-top: 16px !important;
+        }
+        table[class="background_main"] .sm_auto_width {
+          width: auto !important;
+        }
+        table[class="background_main"] .sm_auto_height {
+          height: auto !important;
+        }
+        table[class="background_main"] .sm_border_box {
+          box-sizing: border-box !important;
+        }
+        table[class="background_main"] .sm_block {
+          display: block !important;
+        }
+        table[class="background_main"] .sm_inline_block {
+          display: inline-block !important;
+        }
+        table[class="background_main"] .sm_table {
+          display: table !important;
+        }
+        table[class="background_main"] .sm_no_side_padding {
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+        }
+        table[class="background_main"] .sm_no_border_radius {
+          border-radius: 0 !important;
+        }
+        table[class="background_main"] .sm_no_padding {
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+        }
+        table[class="background_main"] .sm_os_icons_height {
+          /* this is to make the parent element the same height as the inline-block img inside */
+          height: 44px;
+        }
+        .social_img_bottom_margin {
+          /*this class is for social_user_outreach email only*/
+          margin-bottom: 20px !important;
+        }
+        .social_p_bottom_margin {
+          /*this class is for social_user_outreach email only*/
+          margin-bottom: 40px !important;
+        }
+}
+/* More client-specific styles */
+@media all {
+    .ExternalClass {
+          width: 100%;
+}
+.ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%;
+        }
+        .email_footer a {
+          color: #434245 !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important;
+        }
+        a:hover {
+            text-decoration: underline !important;
+        }
+        pre,
+      code {
+        --saf-0: rgba(var(--sk_foreground_low, 29, 28, 29), 0.13);
+        border: 1px solid var(--saf-0);
+        background: rgba(var(--sk_foreground_min, 29, 28, 29), 0.04);
+        font-family: 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace !important;
+        font-size: 12px;
+        line-height: 1.50001;
+        font-variant-ligatures: none;
+        white-space: pre;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: normal;
+        -webkit-tab-size: 4;
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+      }
+      code {
+        color: #e01e5a;
+        padding: 2px 3px 1px;
+        border-radius: 3px;
+      }
+      pre {
+        margin-bottom: 16px;
+        padding: 8px;
+        border-radius: 3px;
+      }
+
+      pre {
+        margin-bottom: 16px;
+        padding: 8px;
+        border-radius: 4px;
+      }
+      blockquote {
+        position: relative;
+        margin-bottom: 16px;
+        padding-left: 16px;
+        border-left: rgba(var(--sk_foreground_low_solid, 221, 221, 221), 1);
+        border-left-width: 4px;
+        border-left-style: solid;
+      }
+}
     </style>
 </head>
 <body>
     <div class="preheader plaintext_ignore" style="font-size: 1px; display: none !important">Here are your account details, along with some tips to help you get started.</div>
     <div class="plaintext_ignore" style="display: none; max-height: 0px; overflow: hidden">&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp; &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌ &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
     <table style="background-color: #ffffff; padding-top: 20px; color: #434245; width: 100%; -webkit-font-smoothing: antialiased; -moz-osx-front-smoothing: greyscale; border: 0; text-align: center; " class="background_main">
+
         <tr>
             <td style="vertical-align: top; padding: 0">
                 <center>
@@ -93,6 +293,9 @@
                         <tr>
                             <td style="width: 546px; vertical-align: top; padding-top: 32px">
                                 <div style="max-width: 600px; margin: 0 auto">
+
+                                    <img src="https://reallygoodemails.slack.com/x-p1910072073780-1900829206357-1897334163094/img/slack_logo_240.png" alt="slack_logo" width="120" height="36" style="margin-top: 0; margin-right: 0; margin-bottom: 32; margin-left: 0px; padding-right: 30px; padding-left: 30px; ">
+
                                     <h1 style="font-size: 30px; padding-left: 30px; padding-left: 30px;">Welcome to Slack</h1>
                                     <p style="font-size: 17px; margin-left: 30px; margin-right: 30px">Here are the details for your new Slack workspace, along with some tips to help you get started.</p>
                                         <div style="padding-right: 30px; padding-left: 30px; padding-bottom: 30px;">
@@ -124,8 +327,8 @@
                                                 <tr>
                                                     <td style="width: 40px;"><img style="padding: 10px 0; display:block; margin-right: auto; margin-left: auto; height:auto;" width="40" src="https://a.slack-edge.com/d51da/img/email/team_white_background@2x.png" alt="">
                                                         <td>
-                                                           <p><span>Invite teammates</span></p>
-                                                           <p>Slack is made for teams. <a href="#">Invite people</a>you frequently work or communicate with.</p>
+                                                           <p style="font-size: 17px; margin-left: 30px; margin-bottom: 0;"><span>Invite teammates</span></p>
+                                                           <p style="font-size: 17px; margin-left: 30px;">Slack is made for teams. <a href="#">Invite people </a>you frequently work or communicate with.</p>
                                                         </td>
                                                     </td>
                                                 </tr>
@@ -137,10 +340,10 @@
                                             <table style="border-collapse: collapse; border: 0; height: 70px; table-layout: fixed; word-wrap: break-word; border-radius: 6px;" >
                                                 <tr>
                                                     <td style="width: 40px;"><img style="padding: 10px 0; display:block; margin-right: auto; margin-left: auto; height:auto;" width="40" src="https://a.slack-edge.com/d51da/img/email/channel_white_background@2x.png" alt="">
-                                                        <td>
-                                                           <p><span>Create channels</span></p>
-                                                           <p><a href="#">Keep work organized in channels</a>organized spaces for everything related to a project, topic, or team.</p>
-                                                        </td>
+                                                    </td>
+                                                    <td>
+                                                       <p style="font-size: 17px; margin-left: 30px; margin-bottom: 0;"><span>Create channels</span></p>
+                                                       <p style="font-size: 17px; margin-left: 30px;"><a href="#">Keep work organized in channels </a>organized spaces for everything related to a project, topic, or team.</p>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -152,8 +355,8 @@
                                                 <tr>
                                                     <td style="width: 40px;"><img style="padding: 10px 0; display:block; margin-right: auto; margin-left: auto; height:auto;" width="40" src="https://a.slack-edge.com/d51da/img/email/download_white_background@2x.png" alt="">
                                                         <td>
-                                                           <p><span>Download Slack</span></p>
-                                                           <p>For the best experience with Slack,<a href="#">download our apps</a>for desktop and mobile.</p>
+                                                           <p style="font-size: 17px; margin-left: 30px; margin-bottom: 0;"><span>Download Slack</span></p>
+                                                           <p style="font-size: 17px; margin-left: 30px;">For the best experience with Slack,<a href="#"> download our apps </a>for desktop and mobile.</p>
                                                         </td>
                                                     </td>
                                                 </tr>
@@ -164,8 +367,8 @@
                                             <div class="sm_inline_block sm_90_percent_width" style="text-align: center; padding-right: 16px; vertical-align: middle; font-size: 30px; margin: 8px 0 36px 0;">
                                                 <table style="width: 100%; text-align:center;" class="sm_table">
                                                     <tr style="width: 100%;">
-                                                        <td>
-                                                            <span style="display: inline-block; position: relative; border-radius: 4px; background-color:#611f69" class="button_link_wrapper plum"><a href="#" class="button_link plum">See more tips</a></span>
+                                                        <td style="width: 100%;">
+                                                            <span style="display: inline-block; position: relative; border-radius: 4px; background-color:#611f69" class="button_link_wrapper plum"><a href="#" class="button_link plum" style="border-top: 13px solid; border-bottom: 13px solid; border-right: 24px solid; border-left: 24px solid; border-color: #611f69; border-radius: 4px; background-color: #611f69; color: #ffffff; font-size: 16px; line-height: 18px; word-break: break-word; display: inline-block; text-align: center; text-align: center; font-weight: 900; text-decoration: none !important; ">See more tips</a></span>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -183,6 +386,9 @@
         <td class="email_footer" style="font-size: 15px; color: #717274; text-align: center; width:100%;">
             <table style="margin: 20px auto 0; background-color: white; border: 0; text-align: center; border-collapse: collapse">
                 <tr>
+                    <td>
+                        &nbsp;
+                    </td>
                     <td ><span style="display: block; color: #1D1C1D; font-size: 15px;">
                         Made by <a href="">Slack Technologies, Inc</a>
                         <br>
@@ -196,7 +402,7 @@
                         <td>
                             &nbsp;
                         </td>
-                        <td style="font-size: 15px; padding: 16px 8px 24px; vertical-align: center;">
+                        <td style="font-size: 15px; padding: 16px 8px 24px; vertical-align: top; text-align: center; width: 100%;">
                               <span><a href="#" style="color: #1D1C1D; text-decoration: underline !important;">Our Blog</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href="#" style="color: #1D1C1D; text-decoration: underline !important;">Email Preferences</a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
